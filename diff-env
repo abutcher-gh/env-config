@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-DIFFOUT=`diff -u "${0%/*}/" "$HOME/" | grep -v '^Only in'`
+DIFFOUT=`diff -ua "${0%/*}/" "$HOME/" | grep -v '^Only in'`
 test -z "$DIFFOUT" && exit 0
 echo $DIFFOUT
 exit 1
