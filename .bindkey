@@ -1,0 +1,8 @@
+#!/source/me/zsh
+#
+# this transforms a readline inputrc of the form:
+#   "\e[3~": delete-char   # comment
+# into zsh bindkey statements and evaluates them.
+#
+bindkey $(sed -n '/^\s*#/ !{ s/"//g;  s/\\e/^[/g; s/\([^:]*\):\([^#]*\)/\1 \2/p }' ~/.inputrc)
+

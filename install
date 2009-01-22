@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+#
+THISDIR="${0%/*}"
+DIFFPROG="$THISDIR/diff-env"
+if ! "$DIFFPROG" >/dev/null
+then
+   echo >&2
+   echo >&2 "Error: will not install links when files differ."
+   echo >&2 "Use '$DIFFPROG' to view changes."
+   echo >&2 "Ensure consistent text then run again."
+   echo >&2
+   exit 1
+fi
+
+cd "$THISDIR"
+
+for f in .??*
+do
+   echo ln -sfn "$THISDIR/$f" "$HOME/$f"
+done

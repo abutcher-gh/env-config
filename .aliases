@@ -1,0 +1,11 @@
+alias ls='ls -F --show-control-chars --color=auto'
+alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
+alias md=mkdir
+alias ll='ls -l'
+alias du='du -h'
+alias df='df -h -x supermount'
+# alias vim='vim -display x'
+alias v=vim
+alias cgrep='grep --color=always'

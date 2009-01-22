@@ -1,0 +1,10 @@
+export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags'
+export DEVROOT=$HOME/devroot
+export SAVEHIST=3000
+export HISTSIZE=3000
+export HISTFILE=$HOME/.bash_history
+export HISTIGNORE="[ \t]*"
+[ -n "$ZSH_VERSION" ] && setopt HIST_IGNORE_SPACE
+export APPEND_HISTORY=1
+export EXTENDED_HISTORY=1
+export PATH=$HOME/bin:$PATH
