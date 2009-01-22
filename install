@@ -16,5 +16,8 @@ cd "$THISDIR"
 
 for f in .??*
 do
-   echo ln -sfn "$THISDIR/$f" "$HOME/$f"
+   # skip .svn dir
+   echo "$f" | grep -q '\.svn' && continue
+   # force link
+   ln -sfn "$THISDIR/$f" "$HOME/$f"
 done
