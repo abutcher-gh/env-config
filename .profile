@@ -20,4 +20,4 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-. "${0%/}"/.profile.local
+. ~/.profile.local
