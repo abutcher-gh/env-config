@@ -1,4 +1,4 @@
-export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags'
+export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags --exclude *ssbackup --exclude *ssprerevert --exclude cscope*'
 export DEVROOT=$HOME/devroot
 export SAVEHIST=3000
 export HISTSIZE=3000
