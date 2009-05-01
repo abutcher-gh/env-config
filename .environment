@@ -8,3 +8,5 @@ export HISTIGNORE="[ \t]*"
 export APPEND_HISTORY=1
 export EXTENDED_HISTORY=1
 export PATH=$HOME/bin:$PATH
+
+. ~/.environment.local
