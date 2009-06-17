@@ -31,6 +31,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+PROMPT="%{]2;$PROMPT%}$PROMPT"
 # added by dev-profile-setup; preserve nested prompt
 [ -n "${PROMPT%%*\%\(\~..SLX\)*}" ] && PROMPT="$SLX_ZSH_PROMPT$PROMPT"
 setopt promptsubst

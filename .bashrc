@@ -72,5 +72,7 @@ fi
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+# update window title
+PS1="$PS1]2;$PS1"
 # added by dev-profile-setup; preserve nested prompt
 [ -n "${PS1%%*\$SLX_EMPTY*}" ] && PS1="$SLX_BASH_PROMPT$PS1"
