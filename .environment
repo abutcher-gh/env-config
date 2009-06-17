@@ -1,5 +1,5 @@
-export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags --exclude *ssbackup --exclude *ssprerevert --exclude cscope*'
-export DEVROOT=$HOME/devroot
+export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags --exclude *ssbackup --exclude *ssprerevert --exclude *cscope.*'
+export DEVROOT=/home2/ajb/git
 export SAVEHIST=3000
 export HISTSIZE=3000
 export HISTFILE=$HOME/.bash_history
@@ -9,4 +9,5 @@ export APPEND_HISTORY=1
 export EXTENDED_HISTORY=1
 export PATH=$HOME/bin:$PATH
 
-. ~/.environment.local
+if [ -f ~/.environment.local ]; then . ~/.environment.local; fi
+
