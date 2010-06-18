@@ -31,7 +31,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PROMPT="%{]2;\${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
+if [ "$TERM" != linux ]
+then
+   PROMPT="%{]2;\${TTY} \${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
+fi
 # added by dev-profile-setup; preserve nested prompt
 [ -n "${PROMPT%%*\%\(\~..SLX\)*}" ] && PROMPT="$SLX_ZSH_PROMPT$PROMPT"
 setopt promptsubst
