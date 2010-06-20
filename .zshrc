@@ -27,6 +27,11 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' substitute 1
 zstyle :compinstall filename '/home/ajb/.zshrc'
 
+if [ -r ~/.message ]
+then
+   cat ~/.message
+fi
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
