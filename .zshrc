@@ -38,7 +38,7 @@ compinit
 
 if [ "$TERM" != linux ]
 then
-   PROMPT="%{]2;\${TTY} \${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
+   PROMPT="%{]2;\${PROMPT_PREFIX}\${TTY} \${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
 fi
 # added by dev-profile-setup; preserve nested prompt
 [ -n "${PROMPT%%*\%\(\~..SLX\)*}" ] && PROMPT="$SLX_ZSH_PROMPT$PROMPT"
