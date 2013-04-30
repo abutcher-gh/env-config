@@ -1,5 +1,5 @@
 export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags --exclude *ssbackup --exclude *ssprerevert --exclude *cscope.*'
-export DEVROOT=$HOME/devroot
+export DEVROOT=${DEVROOT-$HOME/devroot}
 export SAVEHIST=3000
 export HISTSIZE=3000
 export HISTFILE=$HOME/.bash_history
@@ -8,6 +8,8 @@ export HISTIGNORE="[ \t]*"
 export APPEND_HISTORY=1
 export EXTENDED_HISTORY=1
 export PATH=$HOME/bin:$PATH
+export EDITOR=${EDITOR-vim}
+[ -z "$ZSH_VERSION" ] || bindkey -e # still use emacs line editor
 
 if [ -f ~/.environment.local ]; then . ~/.environment.local; fi
 
