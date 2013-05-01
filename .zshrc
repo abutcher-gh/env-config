@@ -25,16 +25,19 @@ zstyle ':completion:*' original true
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' substitute 1
-zstyle :compinstall filename '/home/ajb/.zshrc'
+if [ "$OSTYPE" = cygwin ]; then
+zstyle ':completion:*' fake-files /: '/:a b c d e f g h i j k l m n o p q r s t u v w x y z'
+fi
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 if [ -r ~/.message ]
 then
    cat ~/.message
 fi
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 if [ "$TERM" != linux ]
 then
