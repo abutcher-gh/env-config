@@ -9,6 +9,9 @@ export EXTENDED_HISTORY=1
 export PATH=$HOME/bin:$PATH
 export EDITOR=${EDITOR-vim}
 [ -z "$ZSH_VERSION" ] || bindkey -e # still use emacs line editor
+if [ -n "$SSH_CLIENT" -a "$TERM" = "screen" ]
+then TERM=screen-256color
+fi
 
 if [ -f ~/.environment.local ]; then . ~/.environment.local; fi
 
