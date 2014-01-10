@@ -10,3 +10,4 @@ alias df='df -h -x supermount'
 # alias vim='vim -display x'
 alias v=vim
 alias cgrep='grep --color=always'
+alias screen='screen -U'
