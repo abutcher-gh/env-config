@@ -9,5 +9,5 @@ alias du='du -h'
 alias df='df -h -x supermount'
 # alias vim='vim -display x'
 alias v=vim
-alias cgrep='grep --color=always'
+alias grep='grep --color --exclude="*.svn*" --exclude="*.git*" --exclude=tags --exclude "*ssbackup" --exclude "*ssprerevert" --exclude "*cscope.*"'
 alias screen='screen -U'

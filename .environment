@@ -1,6 +1,5 @@
-export GREP_OPTIONS='--color --exclude=*.svn* --exclude=tags --exclude *ssbackup --exclude *ssprerevert --exclude *cscope.*'
-export SAVEHIST=3000
-export HISTSIZE=3000
+export SAVEHIST=8000
+export HISTSIZE=8000
 export HISTFILE=$HOME/.bash_history
 export HISTIGNORE="[ \t]*"
 [ -n "$ZSH_VERSION" ] && setopt HIST_IGNORE_SPACE
