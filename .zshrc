@@ -39,6 +39,11 @@ then
    cat ~/.message
 fi
 
+if [ "$PROMPT" = '%m%# ' -o "$PROMPT" = '$P$G' ]
+then
+   PROMPT='%n@%m/%y %2~ %# '
+fi
+
 if [ "$TERM" != linux ]
 then
    PROMPT="%{]2;\${PROMPT_PREFIX}\${TTY} \${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
