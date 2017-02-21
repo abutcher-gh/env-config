@@ -58,6 +58,11 @@ fi
 [ -n "${PROMPT%%*\%\(\~..SLX\)*}" ] && PROMPT="$SLX_ZSH_PROMPT$PROMPT"
 setopt promptsubst
 
+PURE_GIT_DOWN_ARROW="${PURE_GIT_DOWN_ARROW:-▼}"
+PURE_GIT_UP_ARROW="${PURE_GIT_UP_ARROW:-▲}"
+PURE_PROMPT_SYMBOL="${PURE_PROMPT_SYMBOL:-›}"
+PURE_GIT_UNTRACKED_DIRTY="${PURE_GIT_UNTRACKED_DIRTY:-0}"
+
 if [ -r ~/.environment.overrides ]
 then . ~/.environment.overrides
 fi
