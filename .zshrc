@@ -44,6 +44,12 @@ then
    PROMPT='%n@%m/%y %2~ %# '
 fi
 
+autoload -U bashcompinit
+bashcompinit
+
+autoload -U promptinit
+promptinit
+
 if [ "$TERM" != linux ]
 then
    PROMPT="%{]2;\${PROMPT_PREFIX}\${TTY} \${DPSLVL+[\${TARGET_SYSTEM-native}] }$PROMPT%}$PROMPT"
@@ -51,3 +57,7 @@ fi
 # added by dev-profile-setup; preserve nested prompt
 [ -n "${PROMPT%%*\%\(\~..SLX\)*}" ] && PROMPT="$SLX_ZSH_PROMPT$PROMPT"
 setopt promptsubst
+
+if [ -r ~/.environment.overrides ]
+then . ~/.environment.overrides
+fi
