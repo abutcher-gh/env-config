@@ -3,3 +3,4 @@ defscrollback 10000
 hardstatus alwayslastline
 hardstatus string " %-w%{= BW}%50> %n %t %{-}%+w%<"
 bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded'"
+bce on
