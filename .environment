@@ -1,6 +1,9 @@
-export SAVEHIST=8000
-export HISTSIZE=8000
-export HISTFILE=$HOME/.bash_history
+export SAVEHIST=32000
+export HISTSIZE=32000
+case "$HISTFILE" in
+   *.ash_history) ;;
+   *) export HISTFILE=$HOME/.bash_history ;;
+esac
 export HISTIGNORE="[ \t]*"
 [ -n "$ZSH_VERSION" ] && setopt HIST_IGNORE_SPACE
 export APPEND_HISTORY=1
