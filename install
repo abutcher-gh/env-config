@@ -16,8 +16,8 @@ cd "$THISDIR"
 
 for f in .??*
 do
-   # skip .svn dir
-   echo "$f" | grep -q '\.svn' && continue
+   # skip vcs dir
+   case "$f" in .svn|.git) continue;; esac
    # force link
    ln -sfn "$THISDIR/$f" "$HOME/$f"
 done
