@@ -11,3 +11,6 @@ alias df='df -h -x supermount'
 alias v=vim
 alias grep='grep --color --exclude="*.svn*" --exclude="*.git*" --exclude=tags --exclude "*ssbackup" --exclude "*ssprerevert" --exclude "*cscope.*"'
 alias screen='screen -U'
+if test -r ~/.aliases.local
+then source ~/.aliases.local
+fi
