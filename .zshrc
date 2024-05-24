@@ -66,3 +66,7 @@ PURE_GIT_UNTRACKED_DIRTY="${PURE_GIT_UNTRACKED_DIRTY:-0}"
 if [ -r ~/.environment.overrides ]
 then . ~/.environment.overrides
 fi
+
+if [ $((NO_FZF)) -eq 0 ] && [ -x "$(which fzf 2>/dev/null)" ]
+then source <(fzf --zsh)
+fi
