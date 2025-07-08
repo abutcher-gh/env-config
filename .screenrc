@@ -1,6 +1,14 @@
 escape ^\\\
 defscrollback 10000
 hardstatus alwayslastline
-hardstatus string " %-w%{= BW}%50> %n %t %{-}%+w%<"
+
+# This is "reasonable" on both screen v4 and v5
+hardstatus string "%{;23}  %-w%{= 47}  %n %t  %{-}%+w  %="
+
+caption splitonly
+caption string "%3n %t"
+
+attrcolor b ".I"
+altscreen on
 bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded'"
 bce on
