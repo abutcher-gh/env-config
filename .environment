@@ -12,8 +12,9 @@ export PATH=$HOME/bin:$PATH
 export EDITOR=${EDITOR-vim}
 [ -z "$ZSH_VERSION" ] || bindkey -e # still use emacs line editor
 if [ -n "$SSH_CLIENT" ] && [[ "$TERM" = screen* ]]
-then TERM=screen-256color
+then TERM=xterm-256color # Should be screen-256color but since v5, get italic text rather than reverse
 fi
+eval `dircolors`
 
 if [ -f ~/.environment.local ]; then . ~/.environment.local; fi
 

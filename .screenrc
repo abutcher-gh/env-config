@@ -9,6 +9,8 @@ caption splitonly
 caption string "%3n %t"
 
 attrcolor b ".I"
+truecolor on
 altscreen on
 bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded'"
+defbce on
 bce on
