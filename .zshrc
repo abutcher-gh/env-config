@@ -68,5 +68,7 @@ then . ~/.environment.overrides
 fi
 
 if [ $((NO_FZF)) -eq 0 ] && [ -x "$(which fzf 2>/dev/null)" ]
-then source <(fzf --zsh)
+then
+   source <(fzf --zsh)
+   source "$(dirname "$(readlink -f "${ZDOTDIR:-$HOME}/.zshrc")")/fzf-git.sh"
 fi
